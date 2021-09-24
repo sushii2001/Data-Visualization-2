@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Social Media Growth rate",
+        "color": "#ffffff"
+    },
+
+    "config": {
+        "background": "#302c54",
+        "axis": {
+          "labelColor": "#ffffff",
+          "titleColor": "#ffffff",
+          "grid": false,
+          "domain": false
+        },
+        "legend": {
+          "labelColor": "#ffffff",
+          "titleColor": "#ffffff"
+        },
+        "view": {
+          "fill": "#302c54",
+          "stroke": "transparent"
+        } 
+    },
+
+    "width": 425,
+    "height": 200,
+    "padding": 15,
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/growth-rate.csv"
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    
+    "encoding": {
+        "color": { 
+            "field": "Social Media", "type": "nominal"
+        }, 
+        "tooltip": [ 
+            {"field": "Social Media", "type": "nominal"}, 
+            {"field": "Year", "type": "nominal"},
+            {"field": "Total Instagram users (MM)", "type": "quantitative"}
+        ],
+        "x": {
+            "field": "Year",
+            "type": "temporal"
+        },
+        "y": {
+            "field": "Total Instagram users (MM)",
+            "type": "quantitative"
+        }
+    }
+}
+  
