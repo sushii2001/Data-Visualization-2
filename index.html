@@ -83,12 +83,13 @@
 
 <script type="text/javascript">
     var viz1 = "js/choropleth_map.vg.json";
+    var viz2 = "js/line-plot.vg.json";
 
 
     vegaEmbed('#viz1', viz1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
-    vegaEmbed('#viz2', viz1, {"actions": false}).then(function(result) {
+    vegaEmbed('#viz2', viz2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
