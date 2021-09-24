@@ -1,0 +1,8 @@
+/* === Plot format === */
+.vis-container{
+	width: 100%;
+}
+
+canvas{
+	border-radius: 15px;
+}
