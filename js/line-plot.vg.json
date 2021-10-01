@@ -33,10 +33,6 @@
     "data": {
       "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/growth-rate.csv"
     },
-    "mark": {
-      "type": "line",
-      "point": true
-    },
     "layer":[
       {      
         "mark": {
