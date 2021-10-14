@@ -16,9 +16,9 @@
       "orient": "top",
       "legendX": 120,
       "legendY": 340,
-      "gradientLength": 1300,
-      "labelFontSize":35,
-      "titleFontSize":30,
+      "gradientLength": 600,
+      "labelFontSize":10,
+      "titleFontSize":15,
       "titleLimit":1000
     },
     "view": {
@@ -27,8 +27,8 @@
     }
   },
 
-  "width": 1300,
-  "height": 650,
+  "width": 600,
+  "height": 300,
   "padding": 15,
 
   "data": {
