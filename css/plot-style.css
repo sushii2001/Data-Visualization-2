@@ -14,12 +14,12 @@ canvas, #ac_path_3afe04bf_3{
 
 .line { 
 	grid-area: line;
-	justify-self: right; 
+	justify-self: left; 
 }
 
 .bar { 
 	grid-area: bar;
-	justify-self: center; 
+	justify-self: center; 	
 }
 
 .word {
