@@ -125,9 +125,17 @@
     var viz2 = "js/line-plot.vg.json";
     var viz3 = "js/horrizontal_bar.vg.json";
 
+
+    vega.expressionFunction('percentformat', function(datum, params) {
+        return datum + "%";
+    });
+
+    vega.expressionFunction('MMformat', function(datum, params) {
+        return datum + " (MM)";
+    });
+
     var tooltipOptions = {
         // theme:"dark"
-        
     };
 
     vegaEmbed('#viz1', viz1,{tooltip: tooltipOptions, "actions": false}).then(function(result) {
