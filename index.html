@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -23,11 +24,24 @@
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/overall-style.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/plot-style.css" media="all">
-  
+    
+
+    <script>
+        // Reset zoom page on reload
+    // function reset() {
+    //     var scale = '1';
+    //     document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+    //     document.body.style.msTransform =   scale;       // IE 9
+    //     document.body.style.transform = scale;     // General
+    //     alert("fuck you")
+    // };
+    // 
+    </script>
 </head>  
 
 
-<body>
+<body onload="reset()">
+    
 
     <div class="page">
     
@@ -42,21 +56,20 @@
 
 
         <!-- start stats -->
-        <!-- <div class="a">
-            <img src="images/a-text1.png" alt="male" style="width:100%; padding-left: 125px;">
+        <div class="a">
             <i class='heart button bx bxs-heart'></i>
-        </div> -->
+            <img src="images/a-text1.png" alt="love" class="atext">
+        </div>
 
-        <!-- <div class="b">
-            <img src="images/a-text1.png" alt="male" style="width:100%; padding-left: 125px;">
+        <div class="b">
             <i class='male button bx bx-male'></i>
+            <img src="images/a-text1.png" alt="male" class="btext">
         </div>
 
         <div class="c">
-            <img src="images/a-text1.png" alt="male" style="width:100%; padding-left: 125px;">
             <i class='female bx bx-female' ></i>
-        </div> -->
-
+            <img src="images/a-text1.png" alt="female" class="ctext">
+        </div>
         <!-- end stats group -->
 
         <!----=== Start first section ===-->
@@ -68,10 +81,10 @@
 
 
         <!----=== Start Second section ===-->
-<!-- 
+
         <div id="viz2" class="line"></div>
-        <div id="viz3" class="bar"></div>
-        <div class="desc2">          
+        <!-- <div id="viz3" class="bar"></div> -->
+        <!-- <div class="desc2">          
             <p>Instagram, the world <span style="color:rgb(224, 140, 250);">ranked 4th</span> social media platform,
             having over <b style="color:rgb(224, 140, 250);">1.386 billion</b> number of users. Where most of the
             users are from India. However, due to high population density and after normalising it, the true concentrated
@@ -143,7 +156,12 @@
     vegaEmbed('#viz3', viz3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+
+
+    
 </script>
+
+
 
 </body>
 </html>
