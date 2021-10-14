@@ -19,7 +19,6 @@
           "titleColor": "#ffffff",
           "legendX": 10,
           "legendY": 15,
-          "gradientLength": 650,
           "labelFontSize":9,
           "titleFontSize":10,
           "titleLimit":1000
@@ -33,7 +32,7 @@
         }
     },
 
-    "width": 180,
+    "width": 190,
     "height": 150,
     "padding": 15,
 
