@@ -5,11 +5,12 @@ anychart.onDocumentReady(function() {
         anychart.data.loadCsvFile("https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/hastag-count.csv", function (data) {
             // create chart from loaded data
             var chart = anychart.tagCloud(data);
+            
 
             // set a chart title
             chart.title('Most used Hashtags');
             chart.title().fontColor("white");
-            chart.title().fontSize(35)
+            chart.title().fontSize(18)
 
             // set an array of angles at which the words will be laid out
             chart.angles([0]);
@@ -23,7 +24,7 @@ anychart.onDocumentReady(function() {
             // set the color range length
             chart.colorRange().length('80%');
             chart.colorRange().labels().fontColor("white");
-            chart.colorRange().labels().fontSize(20)
+            chart.colorRange().labels().fontSize(8)
             
             // Chart background colour
             chart.background().fill("#302c54");
@@ -38,12 +39,14 @@ anychart.onDocumentReady(function() {
             var tooltip = chart.tooltip();
             tooltip.positionMode("point");
             tooltip.format("Count: {%value}");
-            tooltip.fontSize(35)
-            tooltip.title().fontSize(35)
+            tooltip.fontSize(10)
+            tooltip.title().fontSize(10)
 
             
             // chart id:
             chart.container("wordcloud");
+            // chart sizing
+
             // draw chart
             chart.container("wordcloud").draw();
         });
