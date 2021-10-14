@@ -3,6 +3,39 @@
 	width: 100%;
 }
 
-canvas{
+canvas, #ac_path_3afe04bf_3{
 	border-radius: 15px;
+}
+
+.Map { 
+	grid-area: Map; 
+	justify-self: center;
+}
+
+.line { 
+	grid-area: line;
+	justify-self: right; 
+}
+
+.bar { 
+	grid-area: bar;
+	justify-self: center; 
+}
+
+.word {
+	height: 550px;
+	width: 1000px; 
+	grid-area: word;
+	justify-self: center; 
+}
+
+#vg-tooltip-element{
+	font-size: 25px;
+	overflow: hidden;
+    white-space:nowrap;
+	text-align-last: left;
+}
+
+.anychart-credits {
+    display: none;
 }

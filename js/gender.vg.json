@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Social Media Ranking",
+      "color": "#ffffff"
+    },
+    "config": {
+        "background": "#302c54",
+        "axis": {
+          "labelColor": "#ffffff",
+          "titleColor": "#ffffff",
+          "domain": false
+        },
+        "legend": {
+            "disable": true
+        },
+        "view": {
+          "fill": "#302c54",
+          "stroke": "transparent"
+        } 
+      },
+
+    "width": 1000,
+    "height": 500,
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/gender.csv"
+    },
+    "transform": [
+      {
+        "calculate": "{'Male': '🚹', 'Female': '🚺'}[datum.Gender]",
+        "as": "emoji"
+      }
+    ],
+    "mark": {
+      "type": "text", 
+      "baseline": "middle",
+      "size": 11
+    },
+    "encoding": {
+      "x": {"field": "emoji", "type": "nominal", "axis": null},
+      "y": {"field": "datum.Percentage", "type": "ordinal","axis": null},
+      "text": {"field": "emoji", "type": "nominal"},
+      "size": {"field": "Percentage","type": "quantitative"},
+      "tooltip": [ 
+              {"field": "Gender", "type": "nominal"}, 
+              {"field": "Percentage", "type": "quantitative", "format": ".2%"}
+        ]
+    }
+  }
+  

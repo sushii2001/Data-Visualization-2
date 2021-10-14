@@ -2,7 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Social Media Growth rate",
-        "color": "#ffffff"
+        "color": "#ffffff",
+        "fontSize":35
     },
 
     "config": {
@@ -15,7 +16,13 @@
         },
         "legend": {
           "labelColor": "#ffffff",
-          "titleColor": "#ffffff"
+          "titleColor": "#ffffff",
+          "legendX": 120,
+          "legendY": 340,
+          "gradientLength": 650,
+          "labelFontSize":25,
+          "titleFontSize":25,
+          "titleLimit":1000
         },
         "view": {
           "fill": "#302c54",
@@ -23,11 +30,11 @@
         },
         "style":{
           "label":{"align": "center", "baseline":"line-bottom", "color":"white"}
-        } 
+        }
     },
 
-    "width": 425,
-    "height": 200,
+    "width": 750,
+    "height": 515,
     "padding": 15,
 
     "data": {
@@ -37,8 +44,12 @@
       {      
         "mark": {
           "type": "line",
-          "point": true,
-          "cursor": "pointer"
+          "point":{
+            "size":325,
+            "cursor":"pointer"
+          },
+          "cursor": "pointer",
+          "size":8
         }, 
       "params": [{
         "name": "Social Media",
@@ -57,13 +68,19 @@
         "x": {
             "field": "Year",
             "type": "temporal",
-            "axis":{"domain": false, "format": "%Y", "tickSize":0},
-            "title": "Year"
+            "axis":{"domain": false, 
+                    "format": "%Y", 
+                    "tickSize":0, 
+                    "labelFontSize":25,
+                    "labelPadding":35
+                  },
+            "title": null
         },
         "y": {
             "field": "Total Instagram users (MM)",
             "type": "quantitative",
-            "title": "Total Instagram users (MM)"
+            "axis":{"labelFontSize":20, "labelPadding":25},
+            "title": null
         },
         "opacity":{
           "condition":{"param": "Social Media", "value": 1},

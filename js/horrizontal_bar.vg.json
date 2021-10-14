@@ -1,11 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Social Media Ranking",
-        "color": "#ffffff"
-    },
     "config": {
-        "background": "#2b2b2b",
+        "background": "#302c54",
         "axis": {
           "labelColor": "#ffffff",
           "titleColor": "#ffffff",
@@ -14,26 +10,46 @@
         },
         "legend": {
           "labelColor": "#ffffff",
-          "titleColor": "#ffffff"
+          "titleColor": "#ffffff",
+          "gradientDirection": "horizontal",
+          "titleAnchor":"end",
+          "orient": "top",
+          "legendX": 120,
+          "legendY": 340,
+          "gradientLength": 750,
+          "labelFontSize":25,
+          "titleFontSize":25,
+          "titleLimit":1000
         },
         "view": {
-          "fill": "#2b2b2b",
+          "fill": "#302c54",
           "stroke": "transparent"
         },
         "style":{
           "label":{"align": "center", "baseline":"line-bottom", "color":"white"}
         } 
     },
-    "width": 350,
-    "height": 200,
+    "width": 800,
+    "height": 500,
     "padding": 15,
     
     "data": {
-        "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-HW/master/WK-10/sources/ranking.csv"
+        "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/ranking.csv"
       },
     "encoding": {
-      "y": {"field": "Social Media", "type": "nominal", "sort": {"op": "max","field": "Rank"} , "title": null},
-      "x": {"field": "Total Instagram users (MM)", "type": "quantitative", "title": null},
+      "y": {"field": "Social Media", 
+            "type": "nominal", 
+            "sort": {"op": "max","field": "Rank"} , 
+            "title": null,
+            "axis": {
+              "labelFontSize":25
+            }},
+      "x": {"field": "Total Instagram users (MM)", 
+            "type": "quantitative", 
+            "title": null, 
+            "axis": {
+              "labelFontSize":25
+            }},
       "fillOpacity": {
         "condition": {"param": "select", "value": 1},
         "value": 0.3
@@ -51,11 +67,11 @@
         "cursor": "pointer"
       }, 
       "params": [{
-        "name": "highlight",
-        "select": {"type": "point", "on": "mouseover"}
-      },
-      {"name": "select", "select": "point"}
-    ],
+          "name": "highlight",
+          "select": {"type": "point", "on": "mouseover"}
+        },
+        {"name": "select", "select": "point"}
+      ],
       "encoding": {
         "color": {
           "field": "Total Instagram users (MM)",
@@ -74,7 +90,8 @@
         "type": "text",
         "align": "right",
         "xOffset": -4,
-        "aria": false
+        "aria": false,
+        "fontSize":30
       },
       "encoding": {
         "text": {"field": "Total Instagram users (MM)", "type": "quantitative"},

@@ -1,39 +1,165 @@
 body{
 	font-family: sans-serif;
-	background-color: rgb(221, 221, 221);
+	background-color: #18142c;
   }
 
 .page{
-	height: 1500px;
-	width: 900px;    
+	height: 2560px;
+	/* width: 2000px;     */
 	background-color: #18142c;
-	border-top: 50px solid #302c54;
 	margin: auto;
 	padding: 50px;
 	padding-top: 35px;
- }
+	display: grid; 
+	grid-template-columns: 1.5fr 0.8fr 0.7fr 1fr 0.6fr 0.8fr 1.6fr 1.3fr 0.7fr; 
+	grid-template-rows: 0.2fr 0.4fr 2.1fr 0.7fr 1.8fr 1.5fr 0.3fr; 
+	gap: 0px 0px; 
+	grid-template-areas: 
+    ". . . . . . . . ."
+    "Intro Intro Intro Intro Intro desc1 desc1 desc1 desc1"
+    "Intro Intro Intro Intro Intro Map Map Map Map"
+    "a b b c c Map Map Map Map"
+    "line line bar bar bar desc2 desc2 desc2 desc2"
+    "desc3 desc3 desc3 desc3 desc3 . word word ."
+    ". . . . . foot foot foot foot"; 
+} 
 
-.pure-g{
-	margin-bottom: 25px;
+
+ /* <--------=== GRID  ===----------> */
+
+.Intro { 
+	margin-bottom: 20px; 
+	grid-area: Intro;
+	justify-self: center; 
 }
 
+.button {
+	border: none;
+	background: none;
+	font-size: 100px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.a { 
+	grid-area: a;
+}
+
+.heart{
+	color: rgb(253, 107, 131);
+	justify-self: center;
+	align-self: center;
+	cursor: pointer;
+
+	position: absolute;
+	top: 45%;
+	left: 2%;
+	font-size: 270px;
+	border: none;
+}
+
+.heart:hover {
+	color: rgb(245, 166, 179);
+}
+
+.heart:active{
+	transform: scale(1.2);
+}
+
+.b { 
+	grid-area: b;
+}
+
+.male{
+	color: rgb(107, 134, 253);
+	justify-self: center;
+	align-self: center;
+	cursor: pointer;
+
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	font-size: 270px;
+	border: none;
+}
+
+.male:hover {
+	color: rgb(107, 158, 253);
+}
+
+.male:active{
+	transform: scale(1.2);
+}
+.c { 
+	grid-area: c;
+}
+
+.female{
+	color: rgb(255, 108, 218);
+	justify-self: center;
+	align-self: center;
+	cursor: pointer;
+
+	position: absolute;
+	top: 45%;
+	left: 36.5%;
+	font-size: 270px;
+	border: none;
+}
+
+.female:hover {
+	color: rgb(240, 158, 219);
+}
+
+.female:active{
+	transform: scale(1.2);
+}
+
+
+
 /* === Font format ===*/
+
 .header h2, h1{
 	color: aliceblue;
 }
 
-.description-left{
-	color: rgb(196, 196, 196);
-	padding-right: 20px;
-	text-align: left;
+.desc1 { 
+	grid-area: desc1; 
+	font-size: xx-large;
+	justify-self: center;
 }
 
-.description-right {
-	color: rgb(196, 196, 196);
-	padding-left: 20px;
-	text-align: right;
+.desc2 { 
+	grid-area: desc2; 
+	color: rgb(236, 225, 245);
+	font-size: 45px;
+	justify-self: center;
+	text-align: center;
+	align-self: center;
+	padding-right: 180px;
 }
 
-.description{
-	color: rgb(196, 196, 196);
+.desc3 { 
+	grid-area: desc3;
+	color: rgb(236, 225, 245);
+	font-size: 45px;
+	justify-self: center;
+	text-align: center;
+	align-self: center; 
+	padding-left: 100px;
+}
+
+.foot { 
+	grid-area: foot;
+	color: rgb(236, 225, 245);
+	justify-self: end;
+	align-self: flex-end;
+	font-size: x-large;
+}
+
+.year{
+	font-size: 150px;
+	color: rgb(255, 255, 255);
+	margin-left:120px;
 }
