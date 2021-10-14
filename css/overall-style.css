@@ -7,7 +7,7 @@ body{
 }
 
 html{
-	min-height: 1920px;
+	min-height: 720px;
 	zoom: 100%;
 	min-zoom: 100%;
 }
@@ -168,11 +168,12 @@ html{
 .desc3 { 
 	grid-area: desc3;
 	color: rgb(236, 225, 245);
-	font-size: 45px;
+	font-size: 16px;
 	justify-self: center;
 	text-align: center;
 	align-self: center; 
-	padding-left: 100px;
+	margin-left: 80px;
+	margin-right: 80px;
 }
 
 .foot { 
@@ -180,7 +181,8 @@ html{
 	color: rgb(236, 225, 245);
 	justify-self: end;
 	align-self: flex-end;
-	font-size: x-large;
+	padding-top: 145px;
+	font-size: 12px;
 }
 
 .logo{
