@@ -23,11 +23,10 @@ canvas, #ac_path_3afe04bf_3{
 }
 
 .word {
-	/* height: 300px; */
+	height: 100%;
 	width: 450px; 
 	grid-area: word;
 	justify-self: center;
-	align-self: stretch;
 	margin-top: 50px;
 }
 
