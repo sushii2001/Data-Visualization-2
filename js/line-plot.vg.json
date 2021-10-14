@@ -3,7 +3,7 @@
     "title": {
         "text": "Social Media Growth rate",
         "color": "#ffffff",
-        "fontSize":35
+        "fontSize":15
     },
 
     "config": {
@@ -17,11 +17,11 @@
         "legend": {
           "labelColor": "#ffffff",
           "titleColor": "#ffffff",
-          "legendX": 120,
-          "legendY": 340,
+          "legendX": 10,
+          "legendY": 15,
           "gradientLength": 650,
-          "labelFontSize":25,
-          "titleFontSize":25,
+          "labelFontSize":9,
+          "titleFontSize":10,
           "titleLimit":1000
         },
         "view": {
@@ -33,8 +33,8 @@
         }
     },
 
-    "width": 750,
-    "height": 515,
+    "width": 180,
+    "height": 150,
     "padding": 15,
 
     "data": {
@@ -45,11 +45,11 @@
         "mark": {
           "type": "line",
           "point":{
-            "size":325,
+            "size":75,
             "cursor":"pointer"
           },
           "cursor": "pointer",
-          "size":8
+          "size":3
         }, 
       "params": [{
         "name": "Social Media",
@@ -71,15 +71,15 @@
             "axis":{"domain": false, 
                     "format": "%Y", 
                     "tickSize":0, 
-                    "labelFontSize":25,
-                    "labelPadding":35
+                    "labelFontSize":10,
+                    "labelPadding":15
                   },
             "title": null
         },
         "y": {
             "field": "Total Instagram users (MM)",
             "type": "quantitative",
-            "axis":{"labelFontSize":20, "labelPadding":25},
+            "axis":{"labelFontSize":10, "labelPadding":15},
             "title": null
         },
         "opacity":{
