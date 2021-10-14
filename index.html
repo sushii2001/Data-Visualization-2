@@ -2,17 +2,22 @@
 <html>
     
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-data-adapter.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js" type="text/javascript"></script>
+    <!-- Anychart -->
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js" type="text/javascript"></script>
 
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Import pure.css -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
@@ -34,7 +39,7 @@
     <div class="page">
     
         <!-- pure Intro group -->    
-        <div class="Intro">
+        <div class="Intro" data-aos="fade-in" data-aos-duration="1500">
             <img class="logo" src="images/Instagram-logo.png" alt="Instagram Logo">
             <figcaption class="year"> 2021 </figcaption>
             <img class="title" src="images/Instagram-title.png" alt="Instagram title">
@@ -44,36 +49,38 @@
 
 
         <!-- start stats -->
-        <div class="a">
+        <div class="a" data-aos="fade-in" data-aos-duration="1500">
             <img src="images/users1.png" alt="love" class="atext">
             <i class='heart button bx bxs-heart'></i>
         </div>
 
-        <div class="b">
+        <div class="b" data-aos="fade-in" data-aos-duration="1500">
             <img src="images/a-text1.png" alt="male" class="btext">
             <i class='male button bx bx-male'></i>
         </div>
         
-        <div class="c">
+        <div class="c" data-aos="fade-in" data-aos-duration="1500">
             <img src="images/a-text2.png" alt="female" class="ctext">
             <i class='female bx bx-female' ></i>
         </div>
         <!-- end stats group -->
 
         <!----=== Start first section ===-->
-        <div class="desc1">
+        <div class="desc1" data-aos="fade-in" >
             <h1>Instagram users all around the World</h1>
         </div>
-        <div id="viz1" class="Map"></div>
+        <div id="viz1" class="Map" data-aos="fade-left" 
+        data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"
+        ></div>
         <!----=== end first section ===-->
 
 
         <!----=== Start Second section ===-->
 
-        <div id="viz2" class="line"></div>
-        <div id="viz3" class="bar"></div>
+        <div id="viz2" class="line" data-aos="fade-up-right"></div>
+        <div id="viz3" class="bar" data-aos="fade-up-right"></div>
 
-        <div class="desc2">          
+        <div class="desc2" data-aos="fade-left">          
             <p>Instagram, the world's <b style="color:rgb(253, 206, 163);font-size: 23px;">ranked 4th</b> social media platform,
             which contains over <b style="color:rgb(255, 215, 142);font-size: 23px;">1.386 billion</b> number of users.
             Where the gender distribution splits into <b style="color:rgb(101, 128, 248);font-size: 23px;">48.6%</b> males 
@@ -92,8 +99,8 @@
 
         <!----=== Start Third section ===-->
         <script src="js/word-cloud(Anychart).js"></script>       
-        <div class="word" id="wordcloud"></div>
-        <div class="desc3">          
+        <div class="word" id="wordcloud" data-aos="fade-left"></div>
+        <div class="desc3" data-aos="fade-up-right">          
             <p> 
                 The word cloud beside is a collection of the most used hashtags in Instagram among the users.
                 For example, <b style="color:rgb(209, 93, 255);font-size: 23px;">#love</b> is used around 
@@ -152,6 +159,11 @@
     
 </script>
 
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
 
 
 </body>
