@@ -14,11 +14,11 @@
           "gradientDirection": "horizontal",
           "titleAnchor":"end",
           "orient": "top",
-          "legendX": 120,
-          "legendY": 340,
-          "gradientLength": 750,
-          "labelFontSize":25,
-          "titleFontSize":25,
+          "legendX": 10,
+          "legendY": 15,
+          "gradientLength": 220,
+          "labelFontSize":9,
+          "titleFontSize":10,
           "titleLimit":1000
         },
         "view": {
@@ -29,8 +29,8 @@
           "label":{"align": "center", "baseline":"line-bottom", "color":"white"}
         } 
     },
-    "width": 800,
-    "height": 500,
+    "width": 260,
+    "height": 125,
     "padding": 15,
     
     "data": {
@@ -42,13 +42,13 @@
             "sort": {"op": "max","field": "Rank"} , 
             "title": null,
             "axis": {
-              "labelFontSize":25
+              "labelFontSize":10
             }},
       "x": {"field": "Total Instagram users (MM)", 
             "type": "quantitative", 
             "title": null, 
             "axis": {
-              "labelFontSize":25
+              "labelFontSize":10
             }},
       "fillOpacity": {
         "condition": {"param": "select", "value": 1},
@@ -91,7 +91,7 @@
         "align": "right",
         "xOffset": -4,
         "aria": false,
-        "fontSize":30
+        "fontSize":10
       },
       "encoding": {
         "text": {"field": "Total Instagram users (MM)", "type": "quantitative"},
