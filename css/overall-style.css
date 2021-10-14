@@ -56,6 +56,7 @@ html{
 .atext{
 	width:80%;
 	margin-left: 70px; 
+	margin-top: -7px;
 	background:rgb(255, 114, 138);
 }
 
@@ -64,9 +65,9 @@ html{
 	justify-self: center;
 	align-self: center;
 	cursor: pointer;
-
+	margin-top: -15px;
 	position: absolute;
-	top: 505px;
+	top: 515px;
 	left: 50px;
 	font-size: 60px;
 	border: none;
@@ -88,6 +89,7 @@ html{
 .btext{
 	width:80%; 
 	margin-left: 25px;
+	margin-top: -10px;
 	background-color: rgb(101, 128, 248);
 }
 
@@ -98,7 +100,7 @@ html{
 	cursor: pointer;
 
 	position: absolute;
-	top: 500px;
+	top: 490px;
 	left: 240px;
 	font-size: 70px;
 	border: none;
@@ -119,7 +121,6 @@ html{
 .ctext{
 	width:73%; 
 	margin-left: -25px;
-	margin-top: 10px;
 	background-color: rgb(255, 104, 217);
 }
 
@@ -130,7 +131,7 @@ html{
 	cursor: pointer;
 
 	position: absolute;
-	top: 500px;
+	top: 490px;
 	left: 425px;
 	font-size: 72px;
 	border: none;
@@ -175,7 +176,7 @@ html{
 	font-size: 16px;
 	justify-self: center;
 	text-align: center;
-	align-self: center; 
+	align-self: flex-end;
 	margin-left: 80px;
 	margin-right: 80px;
 }

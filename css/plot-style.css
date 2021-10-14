@@ -23,11 +23,11 @@ canvas, #ac_path_3afe04bf_3{
 }
 
 .word {
-	height: 100%;
+	height: 120%;
 	width: 450px; 
 	grid-area: word;
 	justify-self: center;
-	margin-top: 50px;
+	/* margin-top: 10%; */
 }
 
 #vg-tooltip-element{
