@@ -62,7 +62,7 @@
         "tooltip": [ 
             {"field": "Social Media", "type": "nominal"}, 
             {"field": "Year", "type": "temporal", "format": "%Y"},
-            {"field": "Total Instagram users (MM)", "type": "quantitative"}
+            {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"}
         ],
         "x": {
             "field": "Year",

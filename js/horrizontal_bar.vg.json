@@ -56,7 +56,7 @@
       },
       "tooltip": [ 
             {"field": "Social Media", "type": "nominal"}, 
-            {"field": "Total Instagram users (MM)", "type": "quantitative"},
+            {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"},
             {"field": "Rank", "type": "quantitative"}
       ]
     },
