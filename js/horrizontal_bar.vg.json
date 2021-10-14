@@ -16,7 +16,7 @@
           "orient": "top",
           "legendX": 10,
           "legendY": 15,
-          "gradientLength": 220,
+          "gradientLength": 250,
           "labelFontSize":9,
           "titleFontSize":10,
           "titleLimit":1000
