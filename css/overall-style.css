@@ -56,10 +56,11 @@ html{
 .atext{
 	width:80%;
 	margin-left: 70px; 
+	background:rgb(255, 114, 138);
 }
 
 .heart{
-	color: rgb(253, 107, 131);
+	color: rgb(247, 65, 95);
 	justify-self: center;
 	align-self: center;
 	cursor: pointer;
@@ -67,13 +68,13 @@ html{
 	position: absolute;
 	top: 505px;
 	left: 50px;
-	font-size: 50px;
+	font-size: 60px;
 	border: none;
 	margin-left: 70px;
 }
 
 .heart:hover {
-	color: rgb(245, 166, 179);
+	color: rgb(238, 129, 147);
 }
 
 .heart:active{
@@ -87,10 +88,11 @@ html{
 .btext{
 	width:80%; 
 	margin-left: 25px;
+	background-color: rgb(101, 128, 248);
 }
 
 .male{
-	color: rgb(107, 134, 253);
+	color: rgb(101, 128, 248);
 	justify-self: center;
 	align-self: center;
 	cursor: pointer;
@@ -98,13 +100,13 @@ html{
 	position: absolute;
 	top: 500px;
 	left: 240px;
-	font-size: 60px;
+	font-size: 70px;
 	border: none;
-	margin-left: 70px;
+	margin-left: 78px;
 }
 
 .male:hover {
-	color: rgb(107, 158, 253);
+	color: rgb(118, 162, 243);
 }
 
 .male:active{
@@ -115,12 +117,14 @@ html{
 }
 
 .ctext{
-	width:75%; 
+	width:73%; 
 	margin-left: -25px;
+	margin-top: 10px;
+	background-color: rgb(255, 104, 217);
 }
 
 .female{
-	color: rgb(255, 108, 218);
+	color: rgb(255, 104, 217);
 	justify-self: center;
 	align-self: center;
 	cursor: pointer;
@@ -128,9 +132,9 @@ html{
 	position: absolute;
 	top: 500px;
 	left: 425px;
-	font-size: 60px;
+	font-size: 72px;
 	border: none;
-	margin-left: 75px;
+	margin-left: 68px;
 }
 
 .female:hover {
