@@ -1,10 +1,13 @@
 body{
 	font-family: sans-serif;
 	background-color: #18142c;
+	height: 1920px;
+	max-width: 100%;
+    overflow-x: hidden;
   }
 
 .page{
-	height: 2560px;
+	
 	/* width: 2000px;     */
 	background-color: #18142c;
 	margin: auto;
@@ -28,9 +31,8 @@ body{
  /* <--------=== GRID  ===----------> */
 
 .Intro { 
-	margin-bottom: 20px; 
 	grid-area: Intro;
-	justify-self: center; 
+	justify-self: left; 
 }
 
 .button {
@@ -126,7 +128,7 @@ body{
 
 .desc1 { 
 	grid-area: desc1; 
-	font-size: xx-large;
+	font-size: large;
 	justify-self: center;
 }
 
@@ -158,8 +160,20 @@ body{
 	font-size: x-large;
 }
 
+.logo{
+	width:200px;
+	height:200px;
+	padding-left: 110px;
+}
+
 .year{
-	font-size: 150px;
+	font-size: 80px;
+	padding-left: 120px;
 	color: rgb(255, 255, 255);
-	margin-left:120px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+	width:400px;
+	height:100px;
 }
