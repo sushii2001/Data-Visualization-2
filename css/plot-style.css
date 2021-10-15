@@ -30,6 +30,14 @@ canvas, #ac_path_3afe04bf_3{
 	/* margin-top: 10%; */
 }
 
+.vega-bind-name{
+	color: aliceblue;
+}
+
+span{
+	color: aliceblue;
+}
+
 #vg-tooltip-element{
 	font-size: 10px;
 	overflow: hidden;

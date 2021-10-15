@@ -40,18 +40,19 @@
   },
 
   "projection": {
-    "type": "equirectangular"
+    "type": "equirectangular",
+    "scale": {"expr": "zoom_level"}
   },
   
   "params": [
     {
       "name": "zoom_level",
-      "value": 30000,
+      "value": 100,
       "bind": {
         "input": "range",
-        "min": 3500,
-        "max": 60000,
-        "step": 100,
+        "min": 100,
+        "max": 1000,
+        "step": 1,
         "name": "Zoom: "
       }
     }
