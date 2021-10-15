@@ -68,9 +68,10 @@
           [-60, -20],
           [12, 45],
           [35, 2],
-          [100, 30]
+          [100, 30],
+          [150, -25]
         ],
-        "labels": ["Global View", "North America", "South America", "Europe", "Africa", "Asia"],
+        "labels": ["Global View", "North America", "South America", "Europe", "Africa", "Asia", "Australia"],
         "name": "Map Centre: "
       }
     }
