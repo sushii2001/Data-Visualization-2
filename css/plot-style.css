@@ -10,23 +10,23 @@ canvas, #ac_path_3afe04bf_3{
 .Map { 
 	grid-area: Map; 
 	justify-self: center;
+	margin-top: -60px;
 }
 
-.line { 
-	grid-area: line;
-	justify-self: left; 
-}
 
 .bar { 
 	grid-area: bar;
 	justify-self: end; 
+	margin-right: 20px;
 }
 
 .word {
-	height: 120%;
+	height: 95%;
 	width: 450px; 
 	grid-area: word;
 	justify-self: center;
+	margin-left: 100px;
+	margin-top: -60px;
 }
 
 .vega-bind-name{

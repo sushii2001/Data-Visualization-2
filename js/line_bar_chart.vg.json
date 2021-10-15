@@ -37,7 +37,7 @@
         "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/ranking.csv"
       },
       "width":200,
-      "height":125,
+      "height":220,
       "encoding": {
         "y": {"field": "Social Media", 
               "type": "nominal", 
@@ -118,7 +118,7 @@
         "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/growth-rate.csv"
       },
       "width":260,
-      "height":125,
+      "height":220,
       "layer":[
         {      
           "mark": {
