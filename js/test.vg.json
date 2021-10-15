@@ -1,73 +1,107 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "A word cloud visualization depicting Vega research paper abstracts.",
-  "width": 800,
-  "height": 400,
-  "padding": 15,
-
-  "data": [
-    {
-      "name": "table",
-      "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/hastag-count.csv",
-      "transform": [
-        {
-          "type": "countpattern",
-          "field": "data",
-          "case": "upper",
-          "pattern": "[\\w']{4,}"
-        },
-        {
-          "type": "formula", "as": "angle",
-          "expr": "[-45, 0, 45][~~(random() * 3)]"
-        },
-        {
-          "type": "formula", "as": "weight",
-          "expr": "if(datum.text=='VEGA', 600, 300)"
-        }
-      ]
-    }
-  ],
-
-  "scales": [
-    {
-      "name": "color",
-      "type": "ordinal",
-      "domain": {"data": "table", "field": "text"},
-      "range": ["#d5a928", "#652c90", "#939597"]
-    }
-  ],
-
-  "marks": [
-    {
-      "type": "text",
-      "from": {"data": "table"},
-      "encode": {
-        "enter": {
-          "text": {"field": "text"},
-          "align": {"value": "center"},
-          "baseline": {"value": "alphabetic"},
-          "fill": {"scale": "color", "field": "text"}
-        },
-        "update": {
-          "fillOpacity": {"value": 1}
-        },
-        "hover": {
-          "fillOpacity": {"value": 0.5}
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+      "background": "#302c54",
+      "axis": {
+        "labelColor": "#ffffff",
+        "titleColor": "#ffffff",
+        "grid": false,
+        "domain": false
       },
-      "transform": [
-        {
-          "type": "wordcloud",
-          "size": [800, 400],
-          "text": {"field": "Hashtag"},
-          "rotate": {"field": "datum.angle"},
-          "font": "Helvetica Neue, Arial",
-          "fontSize": {"field": "datum.count"},
-          "fontWeight": {"field": "datum.weight"},
-          "fontSizeRange": [1, 20, 30, 40, 60, 100],
-          "padding": 8
+      "legend": {
+        "labelColor": "#ffffff",
+        "titleColor": "#ffffff",
+        "gradientDirection": "horizontal",
+        "titleAnchor":"end",
+        "orient": "top",
+        "legendX": 10,
+        "legendY": 15,
+        "gradientLength": 250,
+        "labelFontSize":9,
+        "titleFontSize":10,
+        "titleLimit":1000
+      },
+      "view": {
+        "fill": "#302c54",
+        "stroke": "transparent"
+      },
+      "style":{
+        "label":{"align": "center", "baseline":"line-bottom", "color":"white"}
+      } 
+  },
+  "width": 260,
+  "height": 125,
+  "padding": 15,
+  
+  "data": {
+      "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/ranking.csv"
+    },
+  "encoding": {
+    "y": {"field": "Social Media", 
+          "type": "nominal", 
+          "sort": {"op": "max","field": "Rank"} , 
+          "title": null,
+          "axis": {
+            "labelFontSize":10
+          }},
+    "x": {"field": "Total Instagram users (MM)", 
+          "type": "quantitative", 
+          "title": null, 
+          "axis": {
+            "labelFontSize":10
+          }},
+    "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3
+    },
+    "tooltip": [ 
+          {"field": "Social Media", "type": "nominal"}, 
+          {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"},
+          {"field": "Rank", "type": "quantitative"}
+    ]
+  },
+  "layer": [{
+    "mark": {
+      "type": "bar",
+      "stroke": "black",
+      "cursor": "pointer"
+    }, 
+    "params": [{
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
+      },
+      {"name": "select", "select": "point"}
+    ],
+    "encoding": {
+      "color": {
+        "field": "Total Instagram users (MM)",
+        "type": "quantitative",
+        "title": "Total user count (MM)",
+        "scale": { 
+          "type": "threshold", 
+          "domain": [300, 600, 900, 1200, 1500], 
+          "range": ["#ffefcf","#ffdf9e", "#e56969", "#c1558b", "#a33b92", "#8a49a1"] 
         }
-      ]
+      }
     }
-  ]
+  },
+   {
+    "mark": {
+      "type": "text",
+      "align": "right",
+      "xOffset": -4,
+      "aria": false,
+      "fontSize":10
+    },
+    "encoding": {
+      "text": {"field": "Total Instagram users (MM)", "type": "quantitative"},
+      "color": {
+        "condition": {
+          "test": {"field": "Total Instagram users (MM)", "gt": 10},
+          "value": "white"
+        },
+        "value": "white"
+      }
+    }
+  }]
 }
