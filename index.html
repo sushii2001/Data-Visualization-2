@@ -75,9 +75,7 @@
 
 
         <!----=== Start Second section ===-->
-
-        <div id="viz2" class="line" data-aos="fade-up-right"></div>
-        <div id="viz3" class="bar" data-aos="fade-up-right"></div>
+        <div id="viz2" class="bar" data-aos="fade-up-right"></div>
 
         <div class="desc2" data-aos="fade-left">          
             <p>Instagram, the world's <b style="color:rgb(253, 206, 163);font-size: 23px;">ranked 4th</b> social media platform,
@@ -128,8 +126,7 @@
 
 <script type="text/javascript">
     var viz1 = "js/choropleth_map.vg.json";
-    var viz2 = "js/line-plot.vg.json";
-    var viz3 = "js/horrizontal_bar.vg.json";
+    var viz2 = "js/horrizontal_bar.vg.json";
 
 
     vega.expressionFunction('percentformat', function(datum, params) {
@@ -148,9 +145,6 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     vegaEmbed('#viz2', viz2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-    vegaEmbed('#viz3', viz3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 

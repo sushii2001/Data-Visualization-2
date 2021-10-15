@@ -19,7 +19,7 @@ canvas, #ac_path_3afe04bf_3{
 
 .bar { 
 	grid-area: bar;
-	justify-self: center; 	
+	justify-self: end; 
 }
 
 .word {
@@ -27,7 +27,6 @@ canvas, #ac_path_3afe04bf_3{
 	width: 450px; 
 	grid-area: word;
 	justify-self: center;
-	/* margin-top: 10%; */
 }
 
 .vega-bind-name{
