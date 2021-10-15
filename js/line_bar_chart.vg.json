@@ -1,0 +1,168 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+      "background": "#302c54",
+      "axis": {
+        "labelColor": "#ffffff",
+        "titleColor": "#ffffff",
+        "grid": false,
+        "domain": false
+      },
+      "legend": {
+        "labelColor": "#ffffff",
+        "titleColor": "#ffffff",
+        "gradientDirection": "horizontal",
+        "titleAnchor":"start",
+        "orient": "top",
+        "legendX": 10,
+        "legendY": 10,
+        "gradientLength": 220,
+        "labelFontSize":8,
+        "titleFontSize":9,
+        "titleLimit":800
+      },
+      "view": {
+        "fill": "#302c54",
+        "stroke": "transparent"
+      },
+      "style":{
+        "label":{"align": "center", "baseline":"line-bottom", "color":"white"}
+      } 
+  },
+  "padding": 15,
+  
+  "hconcat":[
+    { 
+      "data":{
+        "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/ranking.csv"
+      },
+      "width":200,
+      "height":125,
+      "encoding": {
+        "y": {"field": "Social Media", 
+              "type": "nominal", 
+              "sort": {"op": "max","field": "Rank"} , 
+              "title": null,
+              "axis": {
+                "labelFontSize":9
+              }},
+        "x": {"field": "Total Instagram users (MM)", 
+              "type": "quantitative", 
+              "title": null, 
+              "axis": {
+                "labelFontSize":10
+              }},
+        "fillOpacity": {
+          "condition": {"param": "select", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [ 
+              {"field": "Social Media", "type": "nominal"}, 
+              {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"},
+              {"field": "Rank", "type": "quantitative"}
+        ]
+      },
+      "layer": [{
+        "mark": {
+          "type": "bar",
+          "stroke": "black",
+          "cursor": "pointer"
+        }, 
+        "params": [{
+            "name": "filter",
+            "select": {"type": "point", 
+            "fields": ["Social Media"],
+            "on": "click"}
+          },
+          {"name": "select", "select": "point"}
+        ],
+        "transform": [
+          {"filter": {"param": "Social Media"}}
+        ],
+        "encoding": {
+          "color": {
+            "field": "Total Instagram users (MM)",
+            "type": "quantitative",
+            "title": "Total user count (MM)",
+            "scale": { 
+              "type": "threshold", 
+              "domain": [300, 600, 900, 1200, 1500], 
+              "range": ["#ffefcf","#ffdf9e", "#e56969", "#c1558b", "#a33b92", "#8a49a1"] 
+            }
+          }
+        }
+      },
+       {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "xOffset": -4,
+          "aria": false,
+          "fontSize":10
+        }
+      }]
+    },
+
+    { 
+      "data": {
+        "url": "https://raw.githubusercontent.com/sushii2001/Data-Visualization-2/master/sources/growth-rate.csv"
+      },
+      "width":260,
+      "height":125,
+      "layer":[
+        {      
+          "mark": {
+            "type": "line",
+            "point":{
+              "size":75,
+              "cursor":"pointer"
+            },
+            "cursor": "pointer",
+            "size":3
+          }, 
+        "params": [{
+          "name": "Social Media",
+          "select": {
+            "type": "point", 
+            "fields": ["Social Media"],
+            "on": "click"
+          },
+          "bind":"scales" 
+        }],
+        "transform": [{"filter": {"param": "filter"}}],
+      "encoding": {
+          "color": { 
+              "field": "Social Media", "type": "nominal"
+          },
+          "tooltip": [ 
+              {"field": "Social Media", "type": "nominal"}, 
+              {"field": "Year", "type": "temporal", "format": "%Y"},
+              {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"}
+          ],
+          "x": {
+              "field": "Year",
+              "type": "temporal",
+              "axis":{"domain": false, 
+                      "format": "%Y", 
+                      "tickSize":0, 
+                      "labelFontSize":10,
+                      "labelPadding":15
+                    },
+              "title": null
+          },
+          "y": {
+              "field": "Total Instagram users (MM)",
+              "type": "quantitative",
+              "axis":{"labelFontSize":9, "labelPadding":15},
+              "title": null
+          },
+          "opacity":{
+            "condition":{"param": "Social Media", "value": 1},
+            "value": 0.2
+          }
+        }
+      }
+    ]
+    }
+  ]
+}
