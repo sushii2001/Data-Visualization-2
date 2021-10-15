@@ -99,6 +99,16 @@
           "xOffset": -4,
           "aria": false,
           "fontSize":10
+        },
+        "encoding": {
+          "text": {"field": "Total Instagram users (MM)", "type": "quantitative"},
+          "color": {
+            "condition": {
+              "test": {"field": "Total Instagram users (MM)", "gt": 10},
+              "value": "white"
+            },
+            "value": "white"
+          }
         }
       }]
     },
