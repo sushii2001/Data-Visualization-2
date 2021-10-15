@@ -13,7 +13,6 @@ html{
 }
 
 .page{
-	background-color: #18142c;
 	margin: auto;
 	padding: 50px;
 	padding-top: 35px;
@@ -185,8 +184,7 @@ html{
 	grid-area: foot;
 	color: rgb(236, 225, 245);
 	justify-self: end;
-	align-self: flex-end;
-	padding-top: 145px;
+	margin-top: 20%;
 	font-size: 12px;
 }
 
