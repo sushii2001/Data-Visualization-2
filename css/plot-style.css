@@ -37,6 +37,26 @@ span{
 	color: aliceblue;
 }
 
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 70px;
+	right: 60px;
+	z-index: 60;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background-color: rgb(253, 109, 193);
+	color: white;
+	cursor: pointer;
+	padding: 12.5px;
+	border-radius: 25px;
+}
+
+#myBtn:hover {
+	background-color: rgb(236, 173, 255);
+}
+
 #vg-tooltip-element{
 	font-size: 10px;
 	overflow: hidden;
