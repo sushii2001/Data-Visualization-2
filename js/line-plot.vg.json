@@ -52,7 +52,10 @@
         }, 
       "params": [{
         "name": "Social Media",
-        "select": {"type": "point", "fields": ["Social Media"]},
+        "select": {
+          "type": "point", 
+          "fields": ["Social Media"]
+        },
         "bind":"scales" 
       }],
     "encoding": {
