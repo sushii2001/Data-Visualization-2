@@ -41,7 +41,8 @@
 
   "projection": {
     "type": "equirectangular",
-    "scale": {"expr": "zoom_level"}
+    "scale": {"expr": "zoom_level"},
+    "center":{"expr": "center_to"}
   },
   
   "params": [
@@ -54,6 +55,23 @@
         "max": 1000,
         "step": 1,
         "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [0, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [0, 0],
+          [-80, 40],
+          [-60, -20],
+          [12, 45],
+          [35, 2],
+          [100, 30]
+        ],
+        "labels": ["Global View", "North America", "South America", "Europe", "Africa", "Asia"],
+        "name": "Map Centre: "
       }
     }
   ],
