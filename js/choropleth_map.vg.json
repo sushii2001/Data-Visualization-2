@@ -120,9 +120,28 @@
           {"field": "Total population (MM)", "type": "quantitative", "formatType": "MMformat"},
           {"field": "Total Instagram users (MM)", "type": "quantitative", "formatType": "MMformat"},
           {"field": "Total users normalised (%)", "type": "quantitative", "formatType": "percentformat"}
-        ]
+        ] 
       }
+    },
+
+    {
+      "transform": [
+        {
+          "window": [{"op": "rank", "as": "ranking"}],
+          "sort": [{"field": "Total users normalised (%)", "order": "ascending"}]
+        },
+        {"filter": "datum['properties.NAME'] == 'India'"},
+        {
+          "calculate": "'Most populated: ' + datum['properties.NAME']",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "align": "center", "dx": 130, "dy":-55, 
+                "color":"#f59191", "fontSize":11, "fontWeight":600, "opacity":0.85},
+      "encoding": {"text": {"field": "text_annotation"}}
     }
+    
+    
 
   ]
 }
